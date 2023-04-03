@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>iChat App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="join">
+            <div class="join-container">
+                <h1>Join Chatroom</h1>
+                <div class="join-input">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" value="">
+                </div>
+                <button id="join-btn">Join</button>
+            </div>
+        </div>
+        <div class="chatroom ">
+            <div class="header">
+                <h2>Chatroom</h2>
+                <button id="exit-btn">Exit</button>
+            </div>
+            <!-- <div class="messages">
+                <div class="message">
+                    <div class="name">You</div>
+                    <div class="right-message">Hi</div>
+                </div>
+                <div class="left">
+                    <label for="other">Abc</label>
+                    <div class="text">Hi</div>
+                </div>
+                
+            </div> -->
+            <div class="messages">
+                <!-- <div class="my-message">
+                    <div class="message">
+                        <div class="name text-green">You</div>
+                        <div class="text">Hello Shruthi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name text-red">Other</div>
+                        <div class="text">Hello everyone! How are you?</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other
+                        </div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name">Other</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="other-message">
+                    <div class="message">
+                        <div class="name text-red">Other</div>
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et laboriosam autem
+                            consectetur nam. Illo quisquam fuga, perferendis dignissimos accusamus natus! Cum
+                            perferendis minima quo sint ipsum nulla praesentium voluptatibus dolor!</div>
+                    </div> 
+                </div>
+                -->
+                
+                <!-- <div class="display">
+                    Abc has joined the conversation
+                </div> -->
+            </div>
+
+            <div class="sendMessage">
+                <input type="text" name="send" id="send">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

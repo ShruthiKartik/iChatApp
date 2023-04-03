@@ -1,0 +1,144 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+}
+.active{
+    display: block;
+}
+.notActive{
+    display: none;
+}
+.container{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    max-height: 654px;
+    max-width: 600px;
+    /* border: 2px solid red; */    
+}
+.join{
+    height:100%;
+    border-left: 2px solid #5858db1a;
+    border-right:  2px solid #5858db1a;
+    
+}
+.join .join-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 86%;
+    margin: 10px 88px;
+}
+.join-container h1{
+    font-size:38px;
+}
+.join-container .join-input{
+    margin-top: 47px;
+    margin-bottom: 22px;
+}
+.join-container .join-input label{
+    display: block;
+    margin: 6px 0px;
+    font-size: 24px;
+}
+.join-container .join-input input{
+    width: 190%;
+    padding: 9px 10px;
+}
+.join-container  #join-btn{
+    padding: 5px 15px;
+    cursor: pointer;
+    border: 2px solid white;
+    background: black;
+    color: white;
+    outline: none;
+    font-size: 17px;
+}
+
+.chatroom{
+    height:100%;
+    background-color: #f3f4f7;
+}
+.header{
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    padding: 5px 7px;
+}
+.header #exit-btn{
+    padding: 5px 9px;
+    cursor: pointer;
+    border: 2px solid white;
+    background: black;
+    color: white;
+    outline: none;
+}
+.messages{
+    overflow: auto;
+    height:60%;
+    min-height: 84.5%;
+}
+.messages .my-message{
+    display: flex;
+    justify-content: flex-end;
+}
+.messages .other-message{
+    display: flex;
+    justify-content: flex-start;
+}
+.messages .message .name{
+    margin: 3px 2px;
+    padding: 3px 5px;
+}
+
+.messages .message .text{
+    margin: 8px 4px;
+    padding: 3px 5px;
+    word-wrap: break-word;
+}
+
+.messages .message{
+    border: 2px solid #f1ebeb;
+    max-width: 69%;
+    background: white;
+    margin: 4px 7px;
+}
+.messages .display{
+    text-align: center;
+    font-style: italic;
+    margin: 10px;
+}
+.sendMessage{
+    display: flex;
+}
+.sendMessage input{
+    width: 93%;
+    padding: 12px 15px;
+    outline: none;
+    font-size: 1rem;
+}
+.sendMessage #send-btn{
+    height: 46px;
+    padding: 12px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    background: black;
+    color: white;
+
+}
+.text-green{
+    color: #93c793;
+}
+.text-red{
+    color: #c75151;
+}
