@@ -1,8 +1,9 @@
-const socket = io('http://127.0.0.1:3000');
+document.querySelector('.chatroom').classList.add('notActive');
+document.querySelector('.chatroom').classList.remove('active');
+const socket = io('https://ichatapp-h3jz.onrender.com/');
+
 let join=document.getElementsByClassName('join')[0];
 // console.log(join);
-document.querySelector('.chatroom').classList.remove('active');
-document.querySelector('.chatroom').classList.add('notActive');
 
 let joinBtn=document.getElementById('join-btn');
 
