@@ -51,6 +51,7 @@ body{
 .join-container .join-input input{
     width: 190%;
     padding: 9px 10px;
+    font-size:16px;
 }
 .join-container  #join-btn{
     padding: 5px 15px;
@@ -125,7 +126,7 @@ body{
     width: 93%;
     padding: 12px 15px;
     outline: none;
-    font-size: 1rem;
+    font-size: 16px;
 }
 .sendMessage #send-btn{
     height: 46px;
@@ -141,4 +142,22 @@ body{
 }
 .text-red{
     color: #c75151;
+}
+.font-color{
+    color:red;
+}
+
+
+@media (max-width:430px){
+    .join-container h1{
+        font-size: 36px;
+    }
+    .join-container .join-input input{
+        width: 133%;
+    }
+}
+@media (max-width:780px) and (min-width:433px){
+    .join-container .join-input input{
+        width: 169%;
+    }
 }

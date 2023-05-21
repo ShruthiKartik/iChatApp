@@ -1,12 +1,21 @@
-const express = require('express')
-const path=require('path');
-const app = express()
-const port = 3000
+const express = require('express');
+const path=require('path')
+const app = express();
 
-const http = require('http').createServer(app);
-const io = require('socket.io')(http);
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const port=3000
+const io = new Server(server, { cors: { origin: '*' } });
+
+
+
 
 app.use(express.static(path.join(__dirname+"/static")));
+app.get('/socket.io/socket.io.js', (req, res) => {
+  res.sendFile(__dirname + '/node_modules/socket.io/client-dist/socket.io.js');
+});
+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
@@ -27,6 +36,6 @@ io.on("connection",socket=>{
     })
 })
 
-http.listen(port, () => {
+server.listen(port, () => {
   console.log(`iChat app listening on port ${port}`)
 })
