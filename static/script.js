@@ -24,6 +24,7 @@ joinBtn.addEventListener('click',()=>{
     document.querySelector('.chatroom').classList.remove('notActive');
 
     socket.emit("new-user-joined",username);
+    document.getElementById('user').innerHTML=username;
 })
 
 let messages=document.querySelector(".messages");
