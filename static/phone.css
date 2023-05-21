@@ -1,0 +1,15 @@
+.join-container .join-input input{
+    width: 130%;
+    padding: 7px 10px;
+}
+
+.join .join-container{
+    margin: 10px 52px;
+}
+.chatroom {
+    height: 103%;
+}
+.chatroom .header #user {
+    position: absolute;
+    right: 71px;
+}

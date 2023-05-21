@@ -159,16 +159,4 @@ body{
 }
 
 
-@media (max-width:433px) and (min-width:400px){
-    .join-container h1{
-        font-size: 34px;
-    }
-    .join-container .join-input input{
-        width: 133%;
-    }
-}
-@media (max-width:780px) and (min-width:433px){
-    .join-container .join-input input{
-        width: 169%;
-    }
-}
+
