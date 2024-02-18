@@ -1,6 +1,7 @@
 document.querySelector('.chatroom').classList.add('notActive');
 document.querySelector('.chatroom').classList.remove('active');
-const socket = io('https://ichatapp-h3jz.onrender.com/');
+// const socket = io('https://ichatapp-h3jz.onrender.com/');
+const socket = io('http://localhost:3000');
 
 let join=document.getElementsByClassName('join')[0];
 // console.log(join);
@@ -30,6 +31,7 @@ joinBtn.addEventListener('click',()=>{
 
 let messages=document.querySelector(".messages");
 let sendBtn=document.getElementById("send-btn");
+let mobileSendBtn=document.querySelector(".mobile-send-btn");
 
 sendBtn.addEventListener('click',()=>{
     let inputVal=document.getElementById('send').value;
@@ -38,7 +40,22 @@ sendBtn.addEventListener('click',()=>{
     element.innerHTML=`
     <div class="message">
         <div class="name text-green">You</div>
-        <div class="text style="font-size:16px;">${inputVal}</div>
+        <div class="text ">${inputVal}</div>
+    </div>
+    `;
+    element.classList.add("my-message");
+    messages.append(element);
+    socket.emit("send",inputVal);
+    document.getElementById('send').value="";
+});
+mobileSendBtn.addEventListener('click',()=>{
+    let inputVal=document.getElementById('send').value;
+    if(inputVal.length==0) return;
+    let element=document.createElement('div');
+    element.innerHTML=`
+    <div class="message">
+        <div class="name text-green">You</div>
+        <div class="text ">${inputVal}</div>
     </div>
     `;
     element.classList.add("my-message");
@@ -52,6 +69,7 @@ socket.on("user-joined",(name,info)=>{
     displayEle.setAttribute("class","display");
     displayEle.innerHTML=name+" " +info;
     messages.append(displayEle);
+    // console.log(name)
 });
 
 socket.on("receive",(name,msg)=>{
@@ -59,7 +77,7 @@ socket.on("receive",(name,msg)=>{
     element.innerHTML=`
     <div class="message">
         <div class="name text-red">${name}</div>
-        <div class="text style="font-size:16px;">${msg}</div>
+        <div class="text ">${msg}</div>
     </div>
     `;
     element.classList.add("other-message");
@@ -68,6 +86,10 @@ socket.on("receive",(name,msg)=>{
 
 let exitBtn=document.getElementById('exit-btn');
 exitBtn.addEventListener('click',()=>{
+    window.location.href=window.location.href;
+})
+let mobileExitBtn=document.querySelector('.mobile-exit-btn');
+mobileExitBtn.addEventListener('touchstart',()=>{
     window.location.href=window.location.href;
 })
 

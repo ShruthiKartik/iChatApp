@@ -6,8 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="chat.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" media ="screen and (max-width: 1170px)" href="phone.css">
+    <link rel="stylesheet" href="newstyle.css">
+    <!-- <link rel="stylesheet" media ="screen and (max-width: 1170px)" href="phone.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    
+
     <title>iChat App</title>
 </head>
 
@@ -25,154 +30,28 @@
         </div>
         <div class="chatroom ">
             <div class="header">
-                <h2>Chatroom</h2>
-                <p id="user"></p>
-                <img src="user.png" alt="">
-                <button id="exit-btn">Exit</button>
+                <div class="navbar">
+                    <h2>Chatroom</h2>
+                    <p id="user"></p>
+                    <img src="user.png" alt="">
+                    <button id="exit-btn">Exit</button>
+                    <div class="mobile-exit-btn"><ion-icon name="log-out-outline" ></ion-icon></div>
+                </div>
             </div>
-            <!-- <div class="messages">
-                <div class="message">
-                    <div class="name">You</div>
-                    <div class="right-message">Hi</div>
-                </div>
-                <div class="left">
-                    <label for="other">Abc</label>
-                    <div class="text">Hi</div>
-                </div>
-                
-            </div> -->
+           
             <div class="messages">
-                <!-- <div class="my-message">
-                    <div class="message">
-                        <div class="name text-green">You</div>
-                        <div class="text">Hello Shruthi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name text-red">Other</div>
-                        <div class="text">Hello everyone! How are you?</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other
-                        </div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name">Other</div>
-                        <div class="text">Hi</div>
-                    </div>
-                </div>
-                <div class="other-message">
-                    <div class="message">
-                        <div class="name text-red">Other</div>
-                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et laboriosam autem
-                            consectetur nam. Illo quisquam fuga, perferendis dignissimos accusamus natus! Cum
-                            perferendis minima quo sint ipsum nulla praesentium voluptatibus dolor!</div>
-                    </div> 
-                </div>
-                -->
-                
-                <!-- <div class="display">
-                    Abc has joined the conversation
-                </div> -->
             </div>
 
             <div class="sendMessage">
                 <input type="text" name="send" id="send">
                 <button id="send-btn">Send</button>
+                <div class="mobile-send-btn"><ion-icon name="send-outline"></ion-icon></div>
             </div>
         </div>
     </div>
-    <script src="https://ichatapp-h3jz.onrender.com/socket.io/socket.io.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script src="script.js"></script>
 </body>
 

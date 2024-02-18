@@ -8,9 +8,6 @@ const { Server } = require("socket.io");
 const port=process.env.PORT||3000
 const io = new Server(server, { cors: { origin: '*' } });
 
-
-
-
 app.use(express.static(path.join(__dirname+"/static")));
 app.get('/socket.io/socket.io.js', (req, res) => {
   res.sendFile(__dirname + '/node_modules/socket.io/client-dist/socket.io.js');
@@ -24,6 +21,7 @@ let usersObj={};
 
 io.on("connection",socket=>{
     socket.on("new-user-joined",name=>{
+        // console.log(name);
         usersObj[socket.id]=name;
         socket.broadcast.emit("user-joined",name,"has joined the conversation");
     });

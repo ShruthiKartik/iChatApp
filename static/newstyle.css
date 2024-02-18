@@ -1,0 +1,311 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+}
+.active{
+    display: block;
+}
+.notActive{
+    display: none;
+}
+.container{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    max-height: 200vh;
+    max-width: 100vh;
+    border-left: 2px solid rgb(230, 222, 222); 
+    border-right: 2px solid rgb(230, 222, 222); 
+}
+.join{
+    height:100%; 
+}
+.join .join-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 86%;
+    margin: 1rem 5rem;
+}
+.join-container h1{
+    font-size: 3em;
+}
+.join-container .join-input{
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    width: 80%;
+}
+.join-container .join-input label{
+    display: block;
+    margin: 2vh 0vh;
+    font-size: 2rem;
+}
+.join-container .join-input input{
+    width: 100%;
+    padding: 1vw 1vw;
+    font-size:1.3rem;
+    font-family: 'Roboto Slab', serif;
+    border: 2px solid black;
+    outline: none;
+}
+.join-container  #join-btn{
+    cursor: pointer;
+    border: 2px solid rgb(31, 30, 30);
+    background: black;
+    color: white;
+    outline: none;
+    font-size: 1.3rem;
+    height:8%;
+    width: 17%;
+    border-radius: 5px;
+    margin-top: 1vh;
+    font-family: 'Roboto Slab', serif;
+}
+.join-container  #join-btn:hover{
+    background: rgb(107, 105, 105);
+    color: black;
+}
+.chatroom{
+    height:100%;
+    background-color: #f3f4f7;
+}
+.chatroom img {
+    height:61%;
+    width: 7%;
+}
+.chatroom .header #user{
+    font-size: 1.5rem;
+    position:absolute;
+    right: 21%;
+}
+.header{
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9vh;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h2{
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5em;
+    margin:0 1vw;
+}
+.header #exit-btn{
+    cursor: pointer;
+    border: 2px solid white;
+    background: black;
+    color: white;
+    outline: none;
+    font-family: 'Roboto Slab', serif;
+    height: 60%;
+    width: 10%;
+    font-size: 1.3em;
+    margin:0 1vw;
+}
+.header #exit-btn:hover{
+    background: rgb(107, 105, 105);
+    color: black;   
+}
+.messages{
+    overflow: auto;
+    height:60%;
+    min-height: 84.5%;
+}
+.messages .my-message{
+    display: flex;
+    justify-content: flex-end;
+}
+.messages .other-message{
+    display: flex;
+    justify-content: flex-start;
+}
+.messages .message .name{
+    margin: 1vh 0.25vw;
+    padding: 1vh 1vw;
+    font-family: 'PT Serif', serif;
+    font-size: 1.5rem;
+}
+
+.messages .message .text{
+    margin: 1vh 0.25vw;
+    padding: 1vh 1vw;
+    word-wrap: break-word;
+    font-family: 'Inconsolata', monospace;
+    font-size:1.5rem;
+}
+
+.messages .message{
+    border: 2px solid #f1ebeb;
+    max-width: 69%;
+    background: white;
+    margin:0.25vw 1vw;
+    border-radius: 10px;
+}
+.messages .display{
+    text-align: center;
+    font-style: italic;
+    font-family: 'PT Serif', serif;
+    margin: 1vw;
+    /* font-size: 1.3rem; */
+    font-size: 1.0rem;
+}
+.sendMessage{
+    display: flex;
+}
+.sendMessage input{
+    width: 93%;
+    /* padding: 12px 15px; */
+    padding: 1% 2%;
+    outline: none;
+    font-size: 1.5rem;
+}
+.sendMessage #send-btn{
+    height: 15%;
+    width: 15%;
+    padding: 1vh 1vw;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: black;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+.text-green{
+    color: #93c793;
+}
+.text-red{
+    color: #c75151;
+}
+.font-color{
+    color:red;
+}
+
+.mobile-exit-btn{
+    display: none;
+}
+.mobile-send-btn{
+    display: none;
+}
+
+
+/* @media (max-width:760px) {
+    .container{
+        width: 100%;
+    }
+} */
+@media (min-width: 460px) and (max-width:600px) {
+    .join-container h1{
+        font-size: 2em;
+    }
+    .join-container .join-input label{
+        font-size: 1.7rem;
+    }
+    .join-container .join-input input{
+        font-size:1.3rem;
+    }
+    .join-container  #join-btn{
+        font-size: 1.3rem;
+        width: 26%;
+    }
+}
+/* @media (min-width:) and (max-width:460px) {
+    .join-container{
+        align-items: center;
+        text-align: center;
+    }
+    .join-container h1{
+        font-size: 1.5em;
+    }
+    .join-container .join-input label{
+        font-size: 1.5rem;
+    }
+    .join-container .join-input input{
+        width:105%;
+    }
+    .join-container  #join-btn{
+        width: 60%;
+    }
+} */
+@media (min-width:250px) and (max-width:459px) {
+    .join .join-container{
+        margin-left:0 ;
+        margin-right:0 ;
+        align-items: center;
+    }
+    .join-container h1{
+        font-size: 1.8rem;
+    }
+    .join-container .join-input label{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .join-container .join-input input{
+        width:105%;
+    }
+    .join-container  #join-btn{
+        width: 60%;
+    }
+}
+
+@media (max-width:1000px) {
+    .container{
+        width: 100%;
+        border-left: 0;
+        border-right: 0;
+    }
+    .navbar{
+        justify-content: space-between;
+    }
+    #user {
+        display: none;
+    }
+    .navbar img{
+        display: none;
+    }
+    #exit-btn{
+        display: none;
+    }
+    #send-btn{
+        display: none;
+    }
+    .sendMessage input{
+        width:100%;
+        padding-right: 3rem;
+    }
+    .mobile-exit-btn{
+        display: block;
+        position: absolute;
+        top: -8px;
+        right: 0px;
+    }
+    ion-icon[name="log-out-outline"]{
+        width: 2rem;
+        height: 4rem;
+        cursor: pointer;
+    }
+    .mobile-send-btn{
+        display: block;
+        position: absolute;
+        bottom: -11px;
+        right: 0px;
+    }
+    ion-icon[name="send-outline"]{
+        width: 2rem;
+        height: 3rem;
+        cursor: pointer;
+    }
+    
+}
+
