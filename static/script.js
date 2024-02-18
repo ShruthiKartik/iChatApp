@@ -1,7 +1,7 @@
 document.querySelector('.chatroom').classList.add('notActive');
 document.querySelector('.chatroom').classList.remove('active');
-// const socket = io('https://ichatapp-h3jz.onrender.com/');
-const socket = io('http://localhost:3000');
+const socket = io('https://ichatapp-h3jz.onrender.com/');
+// const socket = io('http://localhost:3000');
 
 let join=document.getElementsByClassName('join')[0];
 // console.log(join);
